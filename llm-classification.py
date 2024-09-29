@@ -20,7 +20,7 @@ train_dataset = Dataset.from_pandas(pd.DataFrame({"text": train_text, "label": t
 test_dataset = Dataset.from_pandas(pd.DataFrame({"text": test_text, "label": test_labels}))
 
 model_path = "distilbert-base-uncased"
-tokenizer = AutoTokenizer.from_pretrained(model_path) #, token="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")
+tokenizer = AutoTokenizer.from_pretrained(model_path)
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
     
